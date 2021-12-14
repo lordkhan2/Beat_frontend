@@ -1,0 +1,37 @@
+
+<div *ngIf="userData === 'admin'">
+  <button mat-button [matMenuTriggerFor]="menu">MENU</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item >Home</button>
+    <button mat-menu-item id="label.ManageUsers">Manage Users</button>
+    <button mat-menu-item [matMenuTriggerFor]="framework" id="label.ManageFramework">Manage Framework</button>
+    <button mat-menu-item [matMenuTriggerFor]="organization" id="label.ManageOrganization">Manage Organization</button>
+    <button mat-menu-item id="label.SystemReports">System Reports</button>
+    <button mat-menu-item id="label.MyAccount">My Account</button>
+  </mat-menu>
+  <mat-menu #framework="matMenu">
+    <button mat-menu-item id="label.ManageProcesses">Manage Processes</button>
+    <button mat-menu-item id="label.ManageCategories">Manage Categories</button>
+    <button mat-menu-item id="label.ManageOfficeProfiles">Manage Office Profiles</button>
+    <button mat-menu-item id="label.ManageAssessPeriod">Manage Assessment period</button>
+  </mat-menu>
+  <mat-menu #organization="matMenu">
+    <button mat-menu-item id="label.ManageBranches">Manage Branches</button>
+    <button mat-menu-item id="label.ManageFundCenters">Manage Fund Centers</button>
+  </mat-menu>
+</div>
+<div *ngIf="userData !=='admin'">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item id="label.MyAccount">My Account</button>
+  </mat-menu>
+</div>
+
+
+  
+  
+  
+
+
+
